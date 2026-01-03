@@ -1,0 +1,139 @@
+.footer_header {
+  margin-top: 120px;
+  width: 100%;
+  border-radius: 48px 48px 0px 0px;
+  border-top: 1px solid #ffffff0d;
+}
+
+.footer_container {
+  max-width: 1920px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 490px;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.footer_inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer_inner:nth-child(1) {
+  gap: 24px;
+}
+
+.footer_inner:nth-child(2) {
+  gap: 12px;
+  display: flex;
+}
+
+.footer_logo {
+  display: flex;
+}
+
+body.light .footer_logo p  {
+  color: #0F0F0F;
+}
+
+body.dark .footer_logo p  {
+  color: #ffffff;
+}
+
+
+.footer_logo p {
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 18px;
+}
+
+
+body.light .footer_copy  {
+  color: #0F0F0F99;
+}
+
+body.dark .footer_copy  {
+  color: #ffffff99;
+}
+
+.footer_copy {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+}
+
+body.light .footer_inner a  {
+  color: #0F0F0F99;
+}
+
+body.dark .footer_inner a  {
+  color: #ffffff99;
+}
+
+.footer_inner a {
+  font-family: Inter;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+}
+
+.footer_inner a:hover {
+  color: #ffffff;
+}
+
+.footer_header.top {
+  margin-top: 250px;
+}
+
+/* Mobile Optimized */
+@media (max-width: 1919px) {
+  .footer_container {
+    padding: 0 40px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .auth_header {
+    max-width: 1920px;
+    padding: 0 40px;
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer_container {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer_container {
+    padding: 0 20px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+@media (max-width: 500px) {
+  .footer_container {
+    flex-wrap: wrap;
+    display: block;
+  }
+
+  .footer_inner {
+    display: block !important;
+    width: 100%;
+  }
+
+  .footer_inner a {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+

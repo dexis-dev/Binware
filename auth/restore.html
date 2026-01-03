@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/mode.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Восстановить пароль</title>
+</head>
+<body class="auth">
+
+    <section class="auth_logo_backgorund">
+        <div class="auth_header">
+            <div class="auth_header_back" onclick="window.history.back()">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.21973 3.96978C6.51262 3.67689 6.98738 3.67689 7.28027 3.96978C7.57314 4.26268 7.57316 4.73745 7.28027 5.03033L5.56055 6.75006H12C12.9946 6.75006 13.9481 7.14543 14.6514 7.84869C15.3546 8.55195 15.75 9.50551 15.75 10.5001C15.75 11.4946 15.3546 12.4482 14.6514 13.1514C13.9481 13.8547 12.9945 14.2501 12 14.2501H11.25C10.8358 14.2501 10.5 13.9142 10.5 13.5001C10.5 13.0858 10.8358 12.7501 11.25 12.7501H12C12.5967 12.7501 13.1689 12.5128 13.5908 12.0909C14.0128 11.6689 14.25 11.0968 14.25 10.5001C14.25 9.90333 14.0128 9.33119 13.5908 8.90924C13.2217 8.54009 12.7376 8.31224 12.2227 8.26104L12 8.25006H5.56055L7.28027 9.96978C7.57314 10.2627 7.57316 10.7374 7.28027 11.0303C6.98739 11.3232 6.51261 11.3232 6.21973 11.0303L3.21973 8.03033C3.18473 7.99534 3.15354 7.95667 3.12598 7.91534C3.10647 7.8861 3.08967 7.85565 3.07471 7.82452C3.05825 7.79034 3.04341 7.75514 3.03223 7.71832C3.02842 7.70577 3.02584 7.69292 3.02271 7.68023C3.00843 7.62245 3 7.56225 3 7.50006C3 7.4403 3.0073 7.38219 3.02051 7.32647C3.02416 7.31106 3.02759 7.29553 3.03223 7.28033C3.0434 7.24377 3.05833 7.20882 3.07471 7.17486C3.08908 7.14502 3.10522 7.11582 3.12378 7.0877C3.15181 7.04521 3.18387 7.00564 3.21973 6.96978L6.21973 3.96978Z" fill="white" fill-opacity="0.6"/>
+                </svg>
+                <p>Вернуться на главную</p>
+            </div>
+        </div>
+
+        <div class="auth_container">
+            <div class="auth_logo_parent">
+                <div class="auth_logo img">
+                    <!---->
+                </div>
+            </div>
+            <div class="auth_main_inner">
+                <h1>Восстановить пароль</h1>
+                <p class="auth_main_paragraph">
+                    Ссылка для восстановления пароля была отправлена на вашу почту
+                </p>            
+                <button class="auth_button_1">
+                    Войти в аккаунт
+                </button>                
+            </div>
+        </div>
+
+        <footer class="footer_header top">
+            <div class="footer_container">
+                <div class="footer_inner">
+                    <div class="footer_logo">
+                        <div style="margin-top: 12px;" class="logo"></div>
+                        <p>Binware</p>
+                    </div>
+                    <p class="footer_copy">
+                        © 2025 Binware All rights reserved
+                    </p>
+                </div>
+                <div class="footer_inner">
+                    <a href="#">
+                        Пользовательское соглашение
+                    </a>
+                    <a href="#">
+                        Политика конфиденциальности
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script>
+        const switcher = document.getElementById("themeSwitch");
+        const body = document.body;
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            body.classList.add(savedTheme);
+        } else {
+            body.classList.add("light");
+        }
+        switcher.addEventListener("click", () => {
+            body.classList.toggle("light");
+            body.classList.toggle("dark");
+
+            const currentTheme = body.classList.contains("light") ? "light" : "dark";
+            localStorage.setItem("theme", currentTheme);
+        });
+
+        window.addEventListener("storage", (event) => {
+            if (event.key === "theme") {
+                body.classList.remove("light", "dark");
+                body.classList.add(event.newValue);
+            }
+        });
+    </script>
+    
+
+    <script src="../js/main.js"></script>
+ 
+</body>
+</html>
